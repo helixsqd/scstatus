@@ -39,8 +39,6 @@ func main() {
 	}
 	flag.Parse()
 
-
-
 	// initial hosts entries that still may need %d exploding
 	baseHosts := flag.Args()
 	// read line by line entries from stdin if not a terminal

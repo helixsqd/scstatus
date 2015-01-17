@@ -16,7 +16,9 @@ func jsonData(w http.ResponseWriter, r *http.Request) {
 	if refresh == "true" {
 		gatherData()
 	}
-	Sort(sortStr, entries)
+	if sortStr != "" {
+		Sort(sortStr, entries)
+	}
 
 	jsonBytes, err := json.Marshal(entries)
 	if err != nil {
@@ -71,7 +73,7 @@ func serveHtml(w http.ResponseWriter, r *http.Request) {
     </div>
 </div>
 <script>
-    var sort = "host";
+    var sort = "";
     function refetchData(refreshData) {
         $.ajax({
             url: "/data?sort=" + sort + "&refresh=" + refreshData,
