@@ -29,7 +29,7 @@ Host            URI              Time(ms) Remote Addr
 127.0.0.1:8080  /manager/status  4        127.0.0.1
 ```
 If the manager is using the default context this can be shortened to:
-````shell
+```
 # scstatus -u manageruser -p myvoiceismypassport 127.0.0.1:8080
 
 Host            URI              Time(ms) Remote Addr       
